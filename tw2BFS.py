@@ -2,10 +2,8 @@ from collections import defaultdict
 
 graph = defaultdict(list)
 
-
 def addEdge(u, v, c):
     graph[u].append([v, c])
-
 
 def best(start, goal):
     visited = []
@@ -36,22 +34,12 @@ def best(start, goal):
     return False
 
 
-addEdge('S', 'A', 3)
-addEdge('S', 'B', 6)
-addEdge('S', 'C', 5)
-addEdge('A', 'E', 8)
-addEdge('A', 'D', 9)
-addEdge('B', 'G', 14)
-addEdge('B', 'F', 12)
-addEdge('C', 'H', 7)
-addEdge('H', 'J', 6)
-addEdge('H', 'I', 5)
-addEdge('I', 'M', 2)
-addEdge('I', 'L', 10)
+addEdge('S', 'A', 3) addEdge('S', 'B', 6) addEdge('S', 'C', 5)
+addEdge('A', 'E', 8) addEdge('A', 'D', 9) addEdge('B', 'G', 14)
+addEdge('B', 'F', 12) addEdge('C', 'H', 7) addEdge('H', 'J', 6)
+addEdge('H', 'I', 5) addEdge('I', 'M', 2) addEdge('I', 'L', 10)
 addEdge('I', 'K', 1)
 
-# goal = input('enter start state-> ').upper()
-# end = input('enter goal state-> ').upper()
 if best('S', 'K'):
     print("Path found")
 else:
