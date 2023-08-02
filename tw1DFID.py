@@ -6,6 +6,7 @@ graph = defaultdict(list)
 def addEdge(u, v):
     graph[u].append(v)
 
+
 def dfs(start, goal, depth):
     print(start, end=" ")
     if (start == goal):
@@ -50,4 +51,3 @@ addEdge('G', 'K')
 addEdge('G', 'L')
 
 dfid('A', 'L', 4)
-
